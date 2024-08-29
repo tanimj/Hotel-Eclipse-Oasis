@@ -1,0 +1,310 @@
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Encabezado transparente */
+header {
+    background-color: rgba(51, 51, 51, 0.83); /* Fondo negro con 50% de opacidad */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center; /* Centra el contenido del encabezado */
+    align-items: center;
+    position: fixed; /* Para que el encabezado esté siempre visible en la parte superior */
+    width: 100%;
+    z-index: 1000; /* Asegura que el encabezado esté sobre otros elementos */
+}
+
+/* Estilos para el menú */
+nav {
+    display: flex;
+    justify-content: center; /* Centra el menú */
+    flex-grow: 1; /* Permite que el menú ocupe el espacio disponible */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra las opciones dentro del menú */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Icono del menú - oculto por defecto */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px; /* Posiciona el ícono a la izquierda */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Muestra el ícono del menú en móviles */
+    }
+
+    nav {
+        display: none; /* Oculta el menú por defecto en móviles */
+        flex-direction: column;
+    }
+
+    nav.active {
+        display: flex; /* Muestra el menú cuando el ícono es clicado */
+    }
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none; /* Oculta el ícono del menú en computadoras */
+    }
+
+    nav {
+        display: flex; /* Muestra el menú en computadoras */
+    }
+}
+
+.hero {
+    background: url('fon.jpeg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 360px 100px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f1f1f1;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+}
+
+h1,
+h2,
+h3
+h4 {
+  color: #8f8e7c;
+  font-size: 60px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1;
+}
+.booking-section {
+  padding: 60px 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.booking-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #484f5b;
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.btn{
+    background-color: #817666;
+    border: #817666;
+    color: #fff;
+
+}
+.btn-primary:hover {
+    color: #fff;
+  background-color: #665a45; 
+
+}
+.form-buttons {
+    display: flex;
+    justify-content:center; /* Alinea el botón a la derecha */
+    gap: 15px; /* Añade espacio entre los botones */
+    margin-top: 10px; /* Espacio superior para separar los botones del resto del formulario */
+  }
+
+  .message {
+    margin-top: 20px;
+    color: green;
+}
+.error-message {
+    color: red;
+}
+
+
+.social-icon {
+    color: #676055; /* Cambia el color a azul */
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #817666; /* Cambia el color cuando se pasa el cursor (opcional) */
+}
+
+
+
+/* Estilo general del footer */
+footer {
+    padding: 20px 0;
+    background-color: #ffffffce;
+}
+
+/* Contenedor principal del footer */
+.footer-content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contenedor de imágenes y texto */
+.footer-images1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilo de las imágenes */
+.footer-images1 img {
+    width: 100%;
+    max-width: 300px; /* Tamaño máximo para imágenes */
+    height: auto;
+    border-radius: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del contenedor de información */
+.footer-info1 {
+    max-width: 800px;
+}
+
+/* Estilo de los títulos y párrafos */
+.footer-info1 h3 {
+    margin-bottom: 20px;
+    font-size: 24px; /* Tamaño de fuente ajustado para adaptarse mejor a pantallas pequeñas */
+    color: #000000;
+}
+
+.footer-info1 p {
+    margin-bottom: 10px;
+    font-size: 14px; /* Tamaño de fuente ajustado para adaptarse mejor a pantallas pequeñas */
+    color: #555;
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 768px) {
+    .footer-images1 {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer-info1 {
+        margin-left: 20px;
+    }
+}
+
+
+.services-section {
+    padding: 40px 0;
+    background-color: #f8f9fa;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #333;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-item {
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-item i {
+    font-size: 40px;
+    color: #6c6958; /* Ajusta el color del ícono */
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}}

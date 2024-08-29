@@ -8,8 +8,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="iDroid.png">
     <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,100,200,300,500,600,800,900' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400,700' rel='stylesheet' type='text/css'>
-    <link href='11.css' rel='stylesheet' type='text/css'>
-
+    <link href='3.css' rel='stylesheet' type='text/css'>
+ 
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -18,18 +19,24 @@
 
 </head>
 <body>
-    <header>
-        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
-        <nav>
-            <ul>
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#sn">Sobre Nosotros</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#booking">Reservar</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+      <div class="menu-icon" id="menu-icon">
+          &#9776; <!-- Este es el ícono del menú -->
+      </div>
+      <nav id="menu">
+          <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#sn">Sobre Nosotros</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#booking">Reservar</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+      </nav>
+  </header>
+  
+  <script src="1.js"></script>
+</body>
+
 
 
     <section id="home" class="hero">
@@ -39,7 +46,7 @@
 
     
     <footer>
-        <br><br><br><br><br><br><br> 
+        <br><br><br><br><br><br><br> <br><br><br> 
         <div class="footer-content1">
            
             <div class="footer-images1">
@@ -48,14 +55,16 @@
                 
                 <img src="1.jpg" alt="Imagen del Hotel 1">
                 <div class="footer-info1">
-                    <br><br><br><br><br>
+                   
                     <h3>Sobre Nosotros</h3>
-                    <p>En Hotel Eclipse Oasis, nos dedicamos a ofrecer a nuestros huéspedes una experiencia única y memorable. Nuestro hotel combina lujo y confort en un entorno elegante y moderno. Ofrecemos una variedad de servicios de alta calidad para asegurar que cada estancia sea placentera.</p>
-                    <p>Nuestro objetivo es proporcionar un refugio perfecto para aquellos que buscan relajarse y disfrutar de la belleza y la tranquilidad. Con una ubicación privilegiada y un equipo dedicado, estamos aquí para cumplir con todas tus expectativas.</p>
+                    <p>En Hotel Eclipse Oasis, nos dedicamos a ofrecer a nuestros huéspedes una experiencia única y memorable. Nuestro hotel combina lujo y confort en un entorno elegante y moderno. <br>Ofrecemos una variedad de servicios de alta calidad para asegurar que cada estancia sea placentera.</p>
+                    <p>Nuestro objetivo es proporcionar un refugio perfecto para aquellos que buscan relajarse y disfrutar de la belleza y la tranquilidad. Con una ubicación privilegiada y un equipo dedicado,<br> estamos aquí para cumplir con todas tus expectativas.</p>
                 </div>
+                
                 <img src="2.jpg" alt="Imagen del Hotel 2">
                 
             </div>
+            <br><br><br> <br><br><br> 
             
          
         </div>
@@ -103,48 +112,124 @@
     
     <div id="booking" class="booking-section">
       <div class="container">
-        <h2 class="booking-title">Reserva tu Habitación</h2>
-        <form>
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="name" class="form-label">Nombre Completo</label>
-              <input type="text" class="form-control" id="name" placeholder="Ingrese su nombre completo" required>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="email" class="form-label">Correo Electrónico</label>
-              <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico" required>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="roomType" class="form-label">Tipo de Habitación</label>
-              <select class="form-select" id="roomType" required>
-                <option value="">Seleccione el tipo de habitación</option>
-                <option value="estándar">Estándar</option>
-                <option value="doble">Doble</option>
-                <option value="suite">Suite</option>
-              </select>
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="checkInDate" class="form-label">Fecha de Entrada</label>
-              <input type="date" class="form-control" id="checkInDate" required>
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="checkOutDate" class="form-label">Fecha de Salida</label>
-              <input type="date" class="form-control" id="checkOutDate" required>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="guests" class="form-label">Número de Huéspedes</label>
-              <input type="number" class="form-control" id="guests" min="1" max="10" required>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="totalPrice" class="form-label">Precio Total</label>
-              <input type="text" class="form-control" id="totalPrice" readonly>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary">Reservar</button>
-        </form>
+          <h2 class="booking-title">Reserva tu Habitación</h2>
+          <form id="bookingForm">
+              <div class="row">
+                  <div class="col-md-6 mb-3">
+                      <label for="name" class="form-label">Nombre Completo</label>
+                      <input type="text" class="form-control" id="name" placeholder="Ingrese su nombre completo" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="email" class="form-label">Correo Electrónico</label>
+                      <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="roomType" class="form-label">Tipo de Habitación</label>
+                      <select class="form-select" id="roomType" required>
+                          <option value="">Seleccione el tipo de habitación</option>
+                          <option value="estándar">Estándar</option>
+                          <option value="doble">Doble</option>
+                          <option value="suite">Suite</option>
+                      </select>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                      <label for="checkInDate" class="form-label">Fecha de Entrada</label>
+                      <input type="date" class="form-control" id="checkInDate" required>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                      <label for="checkOutDate" class="form-label">Fecha de Salida</label>
+                      <input type="date" class="form-control" id="checkOutDate" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="guests" class="form-label">Número de Huéspedes</label>
+                      <input type="number" class="form-control" id="guests" min="1" max="10" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="totalPrice" class="form-label">Precio Total</label>
+                      <input type="text" class="form-control" id="totalPrice" readonly>
+                  </div>
+              </div>
+              <div class="form-buttons">
+                  <button type="submit" class="btn btn-primary">Reservar</button>
+                  <button type="button" id="downloadRecord" class="btn btn-secondary">Descargar Registro</button>
+              </div>
+              <div class="message" id="message"></div>
+              <div class="error-message" id="errorMessage"></div>
+          </form>
       </div>
-    </div>     
-   
+  </div>
+  <script>
+      const form = document.getElementById('bookingForm');
+      const message = document.getElementById('message');
+      const errorMessage = document.getElementById('errorMessage');
+      const downloadRecord = document.getElementById('downloadRecord');
+      let recordData = '';
+
+      form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          
+          // Get form values
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const roomType = document.getElementById('roomType').value;
+          const checkInDate = document.getElementById('checkInDate').value;
+          const checkOutDate = document.getElementById('checkOutDate').value;
+          const guests = document.getElementById('guests').value;
+          const totalPrice = document.getElementById('totalPrice').value;
+
+         // Format the record data
+recordData = `
+──────────────────────────────────────────────
+              🌟 RESERVA DE HABITACIÓN 🌟
+──────────────────────────────────────────────
+
+   📛 Nombre Completo:      ${name}
+   📧 Correo Electrónico:   ${email}
+   🏨 Tipo de Habitación:   ${roomType}
+   📅 Fecha de Entrada:     ${checkInDate}
+   📅 Fecha de Salida:      ${checkOutDate}
+   🧳 Número de Huéspedes:  ${guests}
+   💵 Precio Total:         ${totalPrice}
+
+──────────────────────────────────────────────
+        🎉 ¡Gracias por reservar con nosotros! 🎉
+──────────────────────────────────────────────
+`;
+
+
+          // Show confirmation message
+          message.textContent = 'Su información ha sido enviada.';
+          errorMessage.textContent = '';
+      });
+
+      downloadRecord.addEventListener('click', function () {
+          if (recordData) {
+              // Download the record
+              const blob = new Blob([recordData], { type: 'text/plain' });
+              const url = URL.createObjectURL(blob);
+              const a = document.createElement('a');
+              a.href = url;
+              a.download = 'reserva.txt';
+              document.body.appendChild(a);
+              a.click();
+              document.body.removeChild(a);
+
+              // Clear the record data and form fields
+              recordData = '';
+              form.reset();
+              message.textContent = 'Los datos han sido descargados y el formulario ha sido restablecido.';
+              errorMessage.textContent = '';
+          } else {
+              errorMessage.textContent = 'No hay ninguna información para descargar.';
+              message.textContent = '';
+          }
+      });
+  </script>
+    
+
+
+
+    
 
       <footer>
         <div id="contacto" class="contacto"></div>
@@ -195,4 +280,3 @@
     
 </body>
 </html>
-
